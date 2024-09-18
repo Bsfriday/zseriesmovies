@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zseries Home</title>
+</head>
+<body>
+    <h1>Zseries</h1>
+
+    {% for message in messages %}
+    {{ message }}
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+    <h3>hello {{user.username}}</h3>
+    <h4>You're successfully logged in.</h4>
+    {% endif %}
+</body>
+</html>
